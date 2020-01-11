@@ -1301,6 +1301,11 @@ textarea {
 	color: #fff
 }
 
+.textwidget {
+	color: #fff!important;
+	display: inline-block;
+}
+
 .footer-area .footer-link li {
 	margin-bottom: 10px
 }
