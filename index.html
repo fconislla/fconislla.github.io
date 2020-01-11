@@ -34,6 +34,8 @@ firebase.initializeApp({
 
 var db = firebase.firestore();
 
+function enviardatos() {
+
 db.collection("contactos").add({
     correo: "Ada",
     mensaje: "Lovelace",
@@ -42,11 +44,13 @@ db.collection("contactos").add({
 })
 .then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);
+    formSuccess();
 })
 .catch(function(error) {
     console.error("Error adding document: ", error);
 });
-console.log("test")
+}
+
 </script>
 
 <header id="header-wrap">
@@ -702,39 +706,41 @@ Praesent imperdiet, tellus et euismod euismod, risus lorem euismod erat, at fini
 <div class="row contact-form-area wow fadeInUp animated" data-wow-delay="0.3s" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
 <div class="col-lg-7 col-md-12 col-sm-12">
 <div class="contact-block">
+
 <form id="contactForm" novalidate="true">
 <div class="row">
 <div class="col-md-6">
 <div class="form-group">
-<input type="text" class="form-control" id="name" name="name" placeholder="Teléfono" required="" data-error="Please enter your name">
+<input type="text" class="form-control" id="name" name="name" placeholder="Teléfono" required="" data-error="Por favor, ingresa tu teléfono">
 <div class="help-block with-errors"></div>
 </div>
 </div>
 <div class="col-md-6">
 <div class="form-group">
-<input type="text" placeholder="Correo" id="email" class="form-control" name="email" required="" data-error="Please enter your email">
+<input type="text" placeholder="Correo" id="email" class="form-control" name="email" required="" data-error="Por favor, ingresa tu correo">
 <div class="help-block with-errors"></div>
 </div>
 </div>
 <div class="col-md-12">
 <div class="form-group">
-<input type="text" placeholder="Nombre" id="msg_subject" class="form-control" required="" data-error="Please enter your subject">
+<input type="text" placeholder="Nombre" id="msg_subject" class="form-control" required="" data-error="Por favor, ingresa tu nombre">
 <div class="help-block with-errors"></div>
 </div>
 </div>
 <div class="col-md-12">
 <div class="form-group">
-<textarea class="form-control" id="message" placeholder="Mensaje" rows="7" data-error="Write your message" required=""></textarea>
+<textarea class="form-control" id="message" placeholder="Mensaje" rows="7" data-error="Escribe tu mensaje" required=""></textarea>
 <div class="help-block with-errors"></div>
 </div>
 <div class="submit-button text-left">
-<button class="btn btn-common disabled" id="form-submit" type="submit" style="pointer-events: all; cursor: pointer;">Enviar</button>
+<button class="btn btn-common disabled" onclick="enviardatos()" id="form-submit" style="pointer-events: all; cursor: pointer;">Enviar</button>
 <div id="msgSubmit" class="h3 text-center hidden"></div>
 <div class="clearfix"></div>
 </div>
 </div>
 </div>
 </form>
+
 </div>
 </div>
 <div class="col-lg-5 col-md-12 col-xs-12">
