@@ -36,12 +36,19 @@ var db = firebase.firestore();
 
 function enviardatos() {
 
+var telefono = $("#name").val();
+console.log(telefono)
+var email = $("#email").val();
+var name = $("#msg_subject").val();
+var message = $("#message").val();
+
 db.collection("contactos").add({
-    correo: "Ada",
-    mensaje: "Lovelace",
-    nombre: "nuevo",
-    telefono: "nuevo"
+    correo: email,
+    mensaje: message,
+    nombre: name,
+    telefono: telefono
 })
+
 .then(function(docRef) {
     console.log("Document written with ID: ", docRef.id);
     formSuccess();
