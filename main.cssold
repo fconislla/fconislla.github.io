@@ -110,6 +110,27 @@ a:not([href]):not([tabindex]) {
 	background: rgba(61, 96, 244, .3)
 }
 
+.btn2 {
+	font-size: 14px;
+	padding: 10px 30px;
+	cursor: pointer;
+	font-weight: 400;
+	color: #fff;
+	border-radius: 30px;
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+	display: inline-block
+}
+
+.btn2:focus,
+.btn2:active {
+	box-shadow: none;
+	outline: none;
+	color: #fff
+}
+
 .btn {
 	font-size: 14px;
 	padding: 10px 30px;
@@ -139,6 +160,23 @@ a:not([href]):not([tabindex]) {
 }
 
 .btn-common:hover {
+	color: #000000;
+	background: 0 0;
+	border: 1px dotted #000000;
+	box-shadow: 0 6px 22px rgba(0, 0, 0, .1);
+	transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out
+}
+
+.btn-common2 {
+	background-color: #000000;
+	position: relative;
+	z-index: 1;
+	text-transform: uppercase
+}
+
+.btn-common2:hover {
 	color: #000000;
 	background: 0 0;
 	border: 1px dotted #000000;
@@ -460,6 +498,11 @@ hr {
 }
 
 .services-item .services-content h3 a {
+	font-size: 16px;
+	color: #585b60
+}
+
+.services-item .curso-item h3{
 	font-size: 16px;
 	color: #585b60
 }
@@ -1363,6 +1406,17 @@ textarea {
 	color: #f63854
 }
 
+.footer-area #subscribe-form .form-group .btn-common2 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 7px 15px;
+	height: 52px;
+	border-radius: 0;
+	background: 0 0;
+	color: #f63854
+}
+
 #copyright .copyright-content {
 	border-top: 1px solid #d5d4e9;
 	padding: 15px 0;
@@ -1420,3 +1474,4 @@ textarea {
 .social-icon .google:hover {
 	background: #ce332a
 }
+
