@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>SEGURIDAD CERO</title>
+
+<link rel="stylesheet" href="./seguridadcero2_files/bootstrap.min.css">
+
+<link rel="stylesheet" href="./seguridadcero2_files/line-icons.css">
+
+<link rel="stylesheet" href="./seguridadcero2_files/owl.carousel.min.css">
+<link rel="stylesheet" href="./seguridadcero2_files/owl.theme.css">
+
+<link rel="stylesheet" href="./seguridadcero2_files/animate.css">
+
+<link rel="stylesheet" href="./seguridadcero2_files/main.css">
+
+<link rel="stylesheet" href="./seguridadcero2_files/responsive.css">
+</head>
+<body>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
+
+
+<script>
+firebase.initializeApp({
+  apiKey: "AIzaSyBqUsraUjtLgeinW907gyq3gbF3-z5oUJU",
+  authDomain: "seguridarcero.firebaseapp.com",
+  projectId: "seguridarcero"
+});
+
+var db = firebase.firestore();
+
+function enviardatos() {
+
+var telefono = $("#name").val();
+console.log(telefono)
+var email = $("#email").val();
+var name = $("#msg_subject").val();
+var message = $("#message").val();
+
+db.collection("contactos").add({
+    correo: email,
+    mensaje: message,
+    nombre: name,
+    telefono: telefono
+})
+
+.then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+    formSuccess();
+})
+.catch(function(error) {
+    console.error("Error adding document: ", error);
+});
+}
+
+</script>
+
+<header id="header-wrap">
+
+<nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar top-nav-collapse">
+<div class="container">
+
+<a href="index.html"><img src="./seguridadcero2_files/logo.png" alt=""></a>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+<i class="lni-menu"></i>
+</button>
+<div class="collapse navbar-collapse" id="navbarCollapse">
+<ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
+<li class="nav-item active">
+<a class="nav-link" href="index.html#hero-area">
+Inicio
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="index.html#services">
+Servicios
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="index.html#features">
+Compromiso
+</a>
+</li>
+<!--
+<li class="nav-item">
+<a class="nav-link" href="index.html/#pricing">
+Pricing
+</a>
+</li>
+-->
+<!--
+<li class="nav-item">
+<a class="nav-link" href="index.html/#testimonial">
+Testimonial
+</a>
+</li>
+-->
+<li class="nav-item">
+<a class="nav-link" href="#contact">
+Inscríbete
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+
+<div id="hero-area" class="hero-area-bg">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div class="contents">
+<h2 class="head-title">Política de Privacidad</h2>
+
+</p>
+<div class="header-button">
+
+<br>
+<br>
+
+
+<h1>1. Introducción <br></h1>
+SEGURIDAD CERO es una empresa privada que brinda servicios de ciberseguridad. En ese sentido, nos comprometemos a mantener la privacidad y la protección de información de nuestros prospectos de clientes, clientes, proveedores y colaboradores de conformidad con lo establecido en la Ley No. 29733, Ley de Protección de datos personales, su Reglamento y normas complementarias, adoptando para ello las medidas técnicas y organizativas necesarias para evitar la pérdida, mal uso, alteración, acceso no autorizado y robo de los datos personales facilitados por los titulares de datos personales. Asimismo, SEGURIDAD CERO garantiza la mejora continua de estas medidas.<br><br>
+
+En tal contexto, declaramos los siguientes lineamientos que debemos informar a nuestros prospectos de clientes, clientes, proveedores y colaboradores, de forma clara e inequívoca, cuando se recaben sus datos personales a través de cualquiera de nuestros canales:<br><br>
+
+La existencia del tratamiento de datos de carácter personal, la finalidad de la recolección y destinatarios de la información.<br><br>
+
+Carácter obligatorio o facultativo de la respuesta a las preguntas que en su caso les sean planteadas, así como de las consecuencias de la obtención de los datos personales o la negativa a suministrar los mismos.<br><br>
+
+Posibilidad de ejercer sus derechos de acceso, rectificación, cancelación y oposición.<br><br>
+
+Identidad y dirección del responsable del tratamiento de los datos personales.<br><br>
+
+El prospecto de cliente, cliente, proveedor o colaborador será el único responsable de los datos personales que consigne en los formularios. Siendo ellos los únicos responsables en caso se consignen datos personales falsos, inexactos, incompletos o no actualizados.<br>
+
+Cualquier tipo de cesión a terceros de los datos personales de nuestros clientes, proveedores y/o colaboradores de este banco de datos, será comunicada a través de la presente Política de Privacidad, especificando la identidad de los cesionarios y la finalidad con la que se van a tratar los datos personales que están siendo cedidos.<br><br>
+
+<h1>2. Definiciones</h1>
+Datos Personales: Toda información sobre una persona natural que la identifica o la hace identificable a través de medios que pueden ser razonablemente utilizados. Por ejemplo, nombres, documentos de identidad, números telefónicos, entre otros, que identifican o pueden identificar a un individuo.<br><br>
+
+Tratamiento de datos personales: Cualquier operación o procedimiento técnico, automatizado o no, que permite la recopilación, registro, organización, almacenamiento, conservación, elaboración, modificación, extracción, consulta, utilización, bloqueo, supresión, comunicación por transferencia o por difusión o cualquier otra forma de procesamiento que facilite el acceso, correlación o interconexión de los datos personales.<br><br>
+<h1>3. Principios rectores</h1><br>
+SEGURIDAD CERO o, en su caso, quien resulte responsable del tratamiento, cumple con los principios rectores de la protección de datos personales:<br><br>
+
+Principio de consentimiento:<br><br>
+
+En atención al principio de consentimiento, el tratamiento de los datos personales es lícito cuando el titular del dato personal hubiere prestado su consentimiento libre, previo, expreso, informado e inequívoco. No se admiten fórmulas de consentimiento en las que éste no sea expresado de forma directa, como aquellas en las que se requiere presumir, o asumir la existencia de una voluntad que no ha sido expresa. Incluso el consentimiento prestado con otras declaraciones, deberá manifestarse en forma expresa y clara.<br><br>
+
+Principio de finalidad.<br><br>
+
+En atención al principio de finalidad se considera que una finalidad está determinada cuando haya sido expresada con claridad, sin lugar a confusión y cuando de manera objetiva se especifica el objeto que tendrá el tratamiento de los datos personales.<br><br>
+
+Tratándose de banco de datos personales que contengan datos sensibles, su creación solo puede justificarse si su finalidad además de ser legítima, es concreta y acorde con las actividades o fines explícitos del titular del banco de datos personales.<br><br>
+
+Los profesionales que realicen el tratamiento de algún dato personal, además de estar limitados por la finalidad de sus servicios, se encuentran obligados a guardar secreto profesional.<br><br>
+
+Principio de calidad.<br><br>
+
+En atención al principio de calidad, los datos contenidos en un banco de datos personales, deben ajustarse con precisión a la realidad. Se presume que los datos directamente facilitados por el titular de los mismos son exactos.<br><br>
+
+Principio de seguridad.<br><br>
+
+En atención al principio de seguridad, en el tratamiento de los datos personales deben adoptarse las medidas de seguridad que resulten necesarias a fin de evitar cualquier tratamiento contrario a la Ley o a su reglamento, incluyéndose en ellos a la adulteración, la pérdida, las desviaciones de información, intencionales o no, ya sea que los riesgos provengan de la acción humana o del medio técnico utilizado.<br><br>
+
+<h1>4. Cláusula de Protección de Datos Personales</h1><br>
+SEGURIDAD CERO, recopila su información personal, tales como nombres completos, números telefónicos, correos electrónicos, documentos de identidad; entre otros, que resulten necesarios para cumplir con los fines que se detallan más adelante, por medio de formularios físicos, formularios virtuales contenidos en la página web de SEGURIDAD CERO, a través de nuestros Call Centers y /o de cualquiera de nuestros canales, hasta que se cumpla las finalidades de tratamiento o decida revocar su consentimiento.<br><br>
+
+Su información será almacenada por el tiempo necesario para cumplir las finalidades descritas en el acápite siguiente, según corresponda, en nuestros Bancos de Datos Personales de Prospectos de Clientes, Clientes, Proveedores y/o Colaboradores, los cuales se encuentran debidamente inscritos, conforme a la exigencia legal en materia de protección de datos personales.<br><br>
+
+<h1>5. Finalidades</h1>
+Los datos personales de los cuales se realiza el tratamiento, tienen las siguientes finalidades:<br><br>
+
+Prospecto de Clientes:<br><br>
+
+Registrar y almacenar los datos personales de posibles clientes, personas interesadas, y ex clientes para el envío de ofertas, promociones y/o publicidad.<br><br>
+
+Clientes:<br><br>
+
+Contar con un registro de información de todos los clientes. Esta base de datos es utilizada para el envío de beneficios comerciales, ofertas, promociones y/o publicidad, así como para definir estrategias comerciales, definir tendencias, comportamientos de consumos y elaborar los planes tarifarios, definir ofertas y promociones atractivas a los clientes.
+
+Proveedores:<br><br>
+
+Mantener un control de la información de nuestros proveedores, creamos files de información de cada uno. Estos files se actualizan periódicamente y forman parte de nuestra evaluación al momento de decidir la compra de bienes o adquisición de servicios.
+
+Colaboradores:<br><br>
+
+Tener una base de datos actualizada del personal de la empresa.<br><br>
+
+<h1>6. Seguridad y confidencialidad</h1><br>
+SEGURIDAD CERO cuenta con todas las medidas técnicas, legales y organizacionales necesarias para garantizar la seguridad y confidencialidad de sus datos personales. Sus datos personales serán tratados considerando los principios de legalidad, consentimiento, proporcionalidad, calidad, seguridad y los demás presentes en la normativa vigente referente a Protección de Datos Personales, evitando que estos sean filtrados, difundidos o cualquier acción que ponga en peligro su información personal.<br><br>
+
+7. Transferencia de datos personales a terceros<br><br>
+Al brindar su consentimiento, usted autoriza a SEGURIDAD CERO para compartir con sus socios comerciales los datos personales recolectados y estos poder usar los datos personales para las finalidades antes descritas, de conformidad con esta Política de Privacidad.<br><br>
+
+Usted puede conocer dichas empresas AQUÍ. Estas listas podrían ser actualizadas.<br><br>
+
+Asimismo, usted autoriza a SEGURIDAD CERO y a sus socios comerciales a compartir los datos personales recolectados a través de empresas nacionales o extranjeras que operen para o en nombre de SEGURIDAD CERO y/o sus socios comerciales; por ejemplo, compañías que nos prestan servicios de apoyo como el de procesamiento de datos, o que nos ayudan a comercializar nuestros productos y/o servicios. Es posible que, para ejecutar sus funciones dichas empresas necesiten información sobre usted; cabe indicar que, éstas no se encuentran autorizadas para usar los datos personales que compartimos con ellas para ningún otro fin más que el indicado en los términos de esta Política de Privacidad. Cuando SEGURIDAD CERO proceda de esta manera, adoptará las precauciones que según la legalidad vigente sean necesarias para proteger la confidencialidad y seguridad de sus datos personales.<br><br>
+
+Usted puede conocer dichas empresas AQUÍ. Estas listas podrían ser actualizadas.<br><br>
+
+Puede haber, además, otras circunstancias en las cuales SEGURIDAD CERO o sus socios comerciales pueden compartir o transferir a un tercero ajeno los datos personales almacenados en sus bases de datos, para, por ejemplo, cumplir una exigencia legal, colaborar con la administración de justicia, proteger intereses que son cruciales para usted o su empresa, y en los casos de venta, fusión, reorganización y disolución de la compañía u otros similares.<br><br>
+
+Cuando sea adecuado, antes de revelar datos personales a un tercero, SEGURIDAD CERO le exigirá contractualmente a éste que adopte las precauciones necesarias para proteger los datos contra su uso o revelación no autorizados.<br><br>
+
+Si usted no desea que SEGURIDAD CERO comparta sus datos personales con sus socios comerciales, por favor realice su solicitud a través del correo electrónico arco@seguridadcero.com.pe<br><br>
+
+<h1>8. Ejercicio de sus derechos</h1><br>
+SEGURIDAD CERO, preocupado porque se brinde el mejor tratamiento de sus datos personales, le informa que usted tiene el derecho de ejercer sus derechos de acceso, rectificación, cancelación y oposición en cualquiera de nuestros centros de atención de SEGURIDAD CERO, así como también remitir su solicitud al correo: arco@seguridadcero.com.pe.<br><br>
+
+<h1>9. Cambios en la Política de Privacidad</h1><br>
+SEGURIDAD CERO se reserva el derecho de modificar y/o actualizar la presente Política de Privacidad como parte de su mejora continua, ya sea para adaptarla a futuros cambios normativos, brindar una mejor calidad de servicio o comunicar nuevas alternativas relacionadas a la presente Política.<br><br>
+
+Usted será notificado con los cambios que se introduzcan a esta Política de Privacidad publicando en este Sitio la versión actualizada o modificada de la misma. Cuando usted utilice este Sitio, la Aplicación de SEGURIDAD CERO u otros medios donde tome conocimiento de la presente Política de Privacidad después de tales cambios, estará consintiendo que los datos personales que se obtengan de usted o acerca de usted después de publicada la revisión de la Política de Privacidad, estén sujetos a la Política de Privacidad revisada.<br><br>
+
+</p>
+</div>
+</div>
+</div>
+<div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+<div class="services-item wow fadeInRight animated" data-wow-delay="0.3s" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
+
+
+</div>
+</div>
+</div>
+</div>
+
+</header>
+
+
+<footer id="footer" class="footer-area section-padding">
+<div class="container">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+<div class="widget">
+<h3 class="footer-logo"><img src="./seguridadcero2_files/logo.png" alt=""></h3>
+<div class="textwidget">
+<br>
+<p>Asesoramos a las empresas para que aborden con éxito sus desafíos de ciberseguridad.</p>
+</div>
+
+
+
+</div>
+
+</div>
+
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+
+<h3 class="footer-titel">Redes Sociales</h3>
+<div class="social-icon">
+<a class="linkedin" href="https://www.linkedin.com/company/seguridad-cero/#"><i class="lni-linkedin-filled"></i> </a> <div class="textwidget">SEGURIDAD CERO</div>
+</div>
+<div class="social-icon">
+<a class="linkedin" href="https://www.linkedin.com/in/fernando-conislla-murguia/"><i class="lni-linkedin-filled"></i> </a> <div class="textwidget">Fernando Conislla</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+<h3 class="footer-titel">Contacto</h3>
+
+
+<br>
+<i class="lni-phone-handset textwidget"></i> <div class="textwidget">+51 992234599</div>
+<br>
+<br>
+<i class="lni-envelope textwidget"></i> <div class="textwidget">fernando.conislla@seguridadcero.com.pe</div>
+</div>
+</div>
+</div>
+</div>
+<div id="copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="copyright-content">
+<p>Copyright © 2017 SEGURIDAD CERO All Right Reserved</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+
+<a href="#" class="back-to-top" style="display: none;">
+<i class="lni-arrow-up"></i>
+</a>
+
+<div id="preloader" style="display: none;">
+<div class="loader" id="loader-1"></div>
+</div>
+
+
+<script src="./seguridadcero2_files/jquery-min.js"></script>
+<script src="./seguridadcero2_files/popper.min.js"></script>
+<script src="./seguridadcero2_files/bootstrap.min.js"></script>
+<script src="./seguridadcero2_files/owl.carousel.min.js"></script>
+<script src="./seguridadcero2_files/wow.js"></script>
+<script src="./seguridadcero2_files/jquery.nav.js"></script>
+<script src="./seguridadcero2_files/scrolling-nav.js"></script>
+<script src="./seguridadcero2_files/jquery.easing.min.js"></script>
+<script src="./seguridadcero2_files/main.js"></script>
+<script src="./seguridadcero2_files/form-validator.min.js"></script>
+<script src="./seguridadcero2_files/contact-form-script.min.js"></script>
+
+</body></html>
