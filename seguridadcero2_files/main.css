@@ -145,6 +145,13 @@ a:not([href]):not([tabindex]) {
 	text-transform: uppercase
 }
 
+.btn-common3 {
+	background-color: red;
+	position: relative;
+	z-index: 1;
+	text-transform: uppercase
+}
+
 .btn-common:hover {
 	color: #000000;
 	background: 0 0;
