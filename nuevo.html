@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>SEGURIDAD CERO - Curso Básico Ethical Hacking</title>
+<meta name="description" content="Aprende desde cero las técnicas de los expertos en ciberseguridad para atacar los sistemas informáticos.">
+<meta property="og:title" content="SEGURIDAD CERO - Curso Básico Ethical Hacking">
+<meta property="og:url" content="https://www.seguridadcero.com.pe/">
+<meta property="og:description" content="Aprende desde cero las técnicas de los expertos en ciberseguridad para atacar los sistemas informáticos.">
+<meta property="og:image" content="https://www.seguridadcero.com.pe/">
+<meta property="og:type" content="website">
+<link rel="shortcut icon" href="./recursos/favicon.ico">
+
+
+<link href="./recursos/glide.core.min.css" rel="stylesheet">
+<link href="./recursos/glide.theme.min.css" rel="stylesheet">
+
+<link href="./recursos/styles.css" rel="stylesheet">
+<link href="./recursos/stylesProductBE.css" rel="stylesheet">
+
+</head>
+<body id="mainBody">
+
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
+
+
+<script>
+firebase.initializeApp({
+  apiKey: "AIzaSyBqUsraUjtLgeinW907gyq3gbF3-z5oUJU",
+  authDomain: "seguridarcero.firebaseapp.com",
+  projectId: "seguridarcero"
+});
+
+var db = firebase.firestore();
+
+function enviardatos() {
+
+var telefono = document.querySelector('input[name="phone"]').value;
+console.log(telefono)
+var email = document.querySelector('input[name="email"]').value;
+var name = document.querySelector('input[name="name"]').value;
+var message = document.querySelector('input[name="programa"]').value;
+
+db.collection("contactos").add({
+    correo: email,
+    mensaje: message,
+    nombre: name,
+    telefono: telefono
+})
+
+.then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+    formSuccess();
+})
+.catch(function(error) {
+    console.error("Error adding document: ", error);
+});
+}
+
+</script>
+
+
+
+<section id="navbar">
+<div class="navbarContainer">
+<img src="./recursos/logoseguridad.png" alt="SEGURIDAD CERO" onclick="window.open('https://www.seguridadcero.com.pe/');">
+<!--
+<img src="./recursos/menu.png" alt="Menu" onclick="openSideBar()">
+-->
+</div>
+</section>
+<section id="floatingButtons">
+<div class="floatinButtonsContainer desktop-hidden">
+<img src="./recursos/whatsapp.png" alt="Whatsapp" onclick="window.open(&#39;https://api.whatsapp.com/send?phone=51992234599&text=Deseo%20inscibirme%20al%20curso%20de%20Ethical%20Hacking&#39;, &#39;_blank&#39;);">
+<div class="buttonFormContainer" onclick="window.location=&quot;#mainForm&quot;">
+<img src="./recursos/form.png" alt="Contáctanos">
+</div>
+</div>
+
+<div class="floatinButtonsContainer2 mobile-hidden">
+<img src="./recursos/whatsapp.png" alt="Whatsapp" onclick="window.open(&#39;https://api.whatsapp.com/send?phone=51992234599&text=Deseo%20inscibirme%20al%20curso%20de%20Ethical%20Hacking&#39;, &#39;_blank&#39;);">
+</div>
+
+
+
+
+
+
+
+</section>
+<section id="sideBar">
+<div class="topSideBar">
+<img src="./recursos/logoseguridad.png" alt="SEGURIDAD CERO" onclick="window.open('https://www.seguridadcero.com.pe/')">
+<img src="./recursos/close.svg" alt="Cerrar menú" onclick="closeSideBar()">
+</div>
+<div class="sideBarContent">
+<div onclick="window.open(&#39;../desarrollofrontend&#39;, &#39;_self&#39;);">DESARROLLO FRONT-END</div>
+<div onclick="window.open(&#39;./&#39;, &#39;_self&#39;);">DESARROLLO BACK-END</div>
+<div onclick="window.open(&#39;../desarrollodeapps&#39;, &#39;_self&#39;);">DESARROLLO APLICATIVOS MÓVILES</div>
+<div onclick="window.open(&#39;../experienciadeusuario&#39;, &#39;_self&#39;);">DISEÑO DE EXPERIENCIA DE USUARIO</div>
+<br>
+<div onclick="closeSideBarSignUp()">
+INSCRÍBETE
+</div>
+</div>
+<div class="bottomSidebar">
+<img src="./recursos/logoseguridad.png" alt="SEGURIDAD CERO">
+</div>
+</section>
+<section id="welcome">
+<div class="programTitleInside">
+CURSO BÁSICO
+</div>
+<div class="programNameInside">
+ETHICAL HACKING
+</div>
+<div class="programDescriptioInside"><p>
+Aprende desde cero las técnicas de los<br> 
+expertos en ciberseguridad para atacar<br> 
+los sistemas informáticos.</p></div>
+<div class="actionButtonInside" onclick="document.getElementById(&#39;scheduele&#39;).scrollIntoView(true);">Más Info</div>
+
+</section>
+<section id="scheduele">
+<div class="sectionTitle">
+Próximo Inicio
+</div>
+<div class="schedueleContainer">
+
+<div class="schedueleGray">
+<div class="schedueleTitle">Fechas</div>
+<div class="schedueleBody">9,10,11 y 12 </div>
+<div class="schedueleBody">de Marzo</div>
+
+</div>
+
+<div class="schedueleGray">
+<div class="schedueleTitle">Horario</div>
+<div class="schedueleBody">6:30 pm - </div>
+<div class="schedueleBody">10:30 pm</div>
+</div>
+
+<div class="schedueleFucsia">
+<div class="schedueleTitle">Dirección</div>
+<div class="schedueleTitle">Av. Petit Thouars 4968</div>
+<div class="schedueleTitle">Miraflores</div>
+</div>
+</div>
+
+<div class="schedueleContainer">
+
+<div class="schedueleGray">
+<div class="schedueleTitle">Inversión</div>
+
+</div>
+
+<div class="schedueleGray">
+<div class="schedueleTitle"><strike>Precio Normal:</strike></div>
+<div class="schedueleBody"><strike>S/. 1199</strike></div>
+</div>
+
+<div class="scheduelered">
+<div class="schedueleTitle">Oferta 42%:</div>
+<div class="schedueleTitle2">S/. 699</div>
+<div class="schedueleTitle">*Solo hasta 3 Marzo</div>
+</div>
+
+</div>
+
+</section>
+<section id="curricula">
+<div class="sectionTitle">
+Contenido
+</div>
+
+<div class="sectionText">
+Nuestro programa de formación es actualizado en cada edición para añadir las técnicas de ataque más recientes y cubre todas las fases de la metodología del ethical hacking.
+</div>
+
+<div class="unitContainer">
+
+<div class="unitButton" onclick="openUnit1()">
+<div class="unitTitle">
+<br class="desktop-hidden">Modulo 1: Introducción al Ethical Hacking
+</div>
+</div>
+
+<div class="unitButton" onclick="openUnit1()">
+<div class="unitTitle">
+<br class="desktop-hidden">Modulo 2: Reconocimiento
+</div>
+</div>
+
+<div class="unitButton" onclick="openUnit1()">
+<div class="unitTitle">
+<br class="desktop-hidden">Modulo 3: Escaneo
+</div>
+</div>
+
+<div class="unitButton" onclick="openUnit1()">
+<div class="unitTitle">
+<br class="desktop-hidden">Modulo 4: Enumeración
+</div>
+</div>
+
+<div class="unitButton" onclick="openUnit1()">
+<div class="unitTitle">
+<br class="desktop-hidden">Modulo 5: Analisis de vulnerabilidades
+</div>
+</div>
+
+<div class="unitButton" onclick="openUnit1()">
+<div class="unitTitle">
+<br class="desktop-hidden">Modulo 6: Explotación
+</div>
+</div>
+
+<div class="unitButton" onclick="openUnit1()">
+<div class="unitTitle">
+<br class="desktop-hidden">Modulo 7: Hacking de sistemas operativos
+</div>
+</div>
+
+<div class="unitButton" onclick="openUnit1()">
+<div class="unitTitle">
+<br class="desktop-hidden">Modulo 8: Hacking de sistemas aplicaciones web
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="spaces">
+<div class="sectionTitle">
+Herramientas
+</div>
+<div class="sectionText">
+Nuestra formación en ethical hacking le permitirá aprender a utilizar y entender el funcionamiento interno de las principales herramientas para las pruebas de seguridad.
+</div>
+<div class="mobile-hidden">
+<div class="slideshow">
+ <img src="./recursos/tools.png">
+</div>
+
+</div>
+
+<div class="desktop-hidden glide__slide">
+
+<img src="./recursos/tools.png">
+
+</div>
+</section>
+<section id="certification">
+<div class="sectionTitle">
+Instructor
+</div>
+<div class="sectionText">
+<b style="color:#ff0000">Fernando Conislla</b>
+<br>Experto en cibersseguridad
+<br>
+<br>
++5 años como Ethical hacker e investigador de ciberseguridad. Cuenta con las certificaciones CEH, CPTE, CSWAE. Conferencista en eventos internacionales como DragonJar, Bsides Latam, etc. e instructor en diferentes centros de formación especializados en TI.
+</div>
+</section>
+<section id="employability">
+<div class="sectionTitle">
+Beneficios Exclusivos
+</div>
+<div class="sectionText">
+Al participar en nuestro cursos podrás acceder a los siguientes beneficios exclusivos:
+<br>
+<br>
+📌 Certificado de Finalización
+<br>
+📌 Grupo Pivado de Telegram <br>(Compartir información y ofertas de trabajo)
+<br>
+📌 Instructor experto
+<br>
+📌 Cursos gratuitos con certificado
+<br>
+📌 Enfoque 100% Practico
+</div>
+
+<div class="mobile-hidden">
+<div class="slideshow">
+
+ <img src="./recursos/certificado.png">
+
+
+</div>
+</div>
+<div class="desktop-hidden glide__slide">
+
+<img src="./recursos/certificado.png">
+
+</div>
+</section>
+<br><br>
+<form id="mainForm" autocomplete="off">
+<p>Inscríbete y accede a un <b><b style="color:#ff0000">42%</b></b> de descuento en el curso.</p>
+<div class="group">
+<input type="text" name="name" required="">
+<span class="highlight"></span>
+<span class="bar"></span>
+<label>Nombre</label>
+</div>
+<div class="group">
+<input type="number" name="phone" step="1" min="100000" max="999999999" required="">
+<span class="highlight"></span>
+<span class="bar"></span>
+<label>Celular</label>
+</div>
+<div class="group">
+<input type="email" name="email" required="">
+<span class="highlight"></span>
+<span class="bar"></span>
+<label>Correo</label>
+</div>
+<!--
+<div class="boxContainer">
+<input type="checkbox" required="">
+<span>Acepto las<span id="myBtn"><b>Políticas de Privacidad</b></span></span>
+</div>
+-->
+<input type="hidden" name="programa" value="Hacking Básico">
+<!--<input type="submit" value="Inscríbete">-->
+<button type="button" onclick="enviardatos()" id="form-submit">Inscríbete</button>
+
+</form>
+
+<section id="footer">
+<img src="recursos/logoseguridad.png" alt="SEGURIDAD CERO">
+</section>
+
+<div id="myModal" class="modal">
+
+</div>
+
+
+<script src="./recursos/glide.min.js" type="text/javascript"></script>
+<script src="./recursos/axios.min.js.descarga" type="text/javascript"></script>
+<script src="./recursos/appProduct.min.js" type="text/javascript"></script>
+
+
+
+<!--<script src="./recursos/dealsBE.min.js" type="text/javascript"></script>-->
+
+
+
+<!--<script type="text/javascript" id="" src="./recursos/js"></script>-->
