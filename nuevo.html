@@ -43,22 +43,27 @@ var email = document.querySelector('input[name="email"]').value;
 var name = document.querySelector('input[name="name"]').value;
 var message = document.querySelector('input[name="programa"]').value;
 
-db.collection("contactos").add({
-    correo: email,
-    mensaje: message,
-    nombre: name,
-    telefono: telefono
-})
+if(name != "" && email.indexOf("@") > -1 && email.indexOf(".") > -1 && message != "" && telefono.length != "")
+{
+  db.collection("contactos").add({
+      correo: email,
+      mensaje: message,
+      nombre: name,
+      telefono: telefono
+  })
 
-.then(function(docRef) {
-    console.log("Document written with ID: ", docRef.id);
-    formSuccess();
-})
-.catch(function(error) {
-    console.error("Error adding document: ", error);
-});
+  .then(function(docRef) {
+      console.log("Document written with ID: ", docRef.id);
+      document.getElementById("resultamessage").innerHTML="Gracias por matricularte! Nos comunicaremos contigo cuanto antes."
+      formSuccess();
+  })
+  .catch(function(error) {
+      console.error("Error adding document: ", error);
+  });
 }
-
+else
+  document.getElementById("resultamessage").innerHTML="Completa tus datos adecuadamente."
+}
 </script>
 
 
@@ -318,6 +323,7 @@ Al participar en nuestro cursos podrás acceder a los siguientes beneficios excl
 <span class="highlight"></span>
 <span class="bar"></span>
 <label>Correo</label>
+
 </div>
 <!--
 <div class="boxContainer">
@@ -327,7 +333,12 @@ Al participar en nuestro cursos podrás acceder a los siguientes beneficios excl
 -->
 <input type="hidden" name="programa" value="Hacking Básico">
 <!--<input type="submit" value="Inscríbete">-->
+
 <button type="button" onclick="enviardatos()" id="form-submit">Inscríbete</button>
+
+<div class="group">
+<label id="resultamessage" style="color:red;"></label>
+</div>
 
 </form>
 
