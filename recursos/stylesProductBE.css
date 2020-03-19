@@ -15,5 +15,27 @@
 
 #employability{margin-top:10vw}#employability .glide__slide img{width:100vw}@media only screen and (min-width:500px){#employability{width:68vw;margin-top:5vw}.slideshow{width:60vw;margin:2vw auto;overflow:hidden;height:30vw}.slideshow-container{width:calc(60vw * 4);font-size:0;transition:.2s ease;height:225px}.slideshow-container:hover{animation-play-state:paused}#employability img{width:60vw;height:auto;display:inline-block}.slide{animation:slide 20s ease infinite}@keyframes slide{0%{transform:translateX(0)}12.5%{transform:translateX(0)}25%{transform:translateX(-25%)}37.5%{transform:translateX(-25%)}50%{transform:translateX(-50%)}62.5%{transform:translateX(-50%)}75%{transform:translateX(-75%)}87.5%{transform:translateX(-75%)}99%{transform:translateX(-75%)}100%{transform:translateX(0)}}}
 
+#employability3{margin-top:10vw}#employability3 .glide__slide img{width:100vw}@media only screen and (min-width:500px){#employability3{width:68vw;margin-top:5vw}.slideshow{width:60vw;margin:2vw auto;overflow:hidden;height:30vw}.slideshow-container{width:calc(60vw * 4);font-size:0;transition:.2s ease;height:225px}.slideshow-container:hover{animation-play-state:paused}#employability3 img{width:18vw;height:auto;display:inline-block}.slide{animation:slide 20s ease infinite}@keyframes slide{0%{transform:translateX(0)}12.5%{transform:translateX(0)}25%{transform:translateX(-25%)}37.5%{transform:translateX(-25%)}50%{transform:translateX(-50%)}62.5%{transform:translateX(-50%)}75%{transform:translateX(-75%)}87.5%{transform:translateX(-75%)}99%{transform:translateX(-75%)}100%{transform:translateX(0)}}}
 /*Certification & employability */
 #certification{margin-top:10vw}#employability2{margin-top:10vw}@media only screen and (min-width:500px){#certification{width:68vw;margin-top:5vw}#employability2{width:68vw;margin-top:5vw}}
+
+.rightcard {
+	padding: 2vw 0 2vw 4vw;
+
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: flex-end
+}
+.rightcard span div,
+.rightcard span p {
+	padding: 0 2vw 0 0
+}
+.rightcard span p {
+	font-size: 1vw;
+	font-weight: 300
+}
+
+.valueCards img {
+	width: 20vw
+	
+}
