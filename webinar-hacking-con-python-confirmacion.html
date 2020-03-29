@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Webinar - Hacking con Python</title>
+<meta name="description" content="Seminario Básico HACKING CON PYTHON">
+<meta property="og:title" content="Webinar HACKING CON PYTHON">
+<meta property="og:url" content="https://www.seguridadcero.com.pe/webinar-hacking-con-python.html">
+<meta property="og:description" content="Seminario Básico HACKING CON PYTHON">
+<meta property="og:image" content="https://www.seguridadcero.com.pe/recursos/hacking-python2.png">
+<meta property="og:type" content="website">
+<link rel="shortcut icon" href="./recursos/favicon.ico">
+
+
+<link href="./recursos/glide.core.min.css" rel="stylesheet">
+<link href="./recursos/glide.theme.min.css" rel="stylesheet">
+
+<link href="./recursos/styles2.css" rel="stylesheet">
+<link href="./recursos/stylesProductBE2.css" rel="stylesheet">
+
+</head>
+<body id="mainBody">
+
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
+
+
+<script>
+firebase.initializeApp({
+  apiKey: "AIzaSyBqUsraUjtLgeinW907gyq3gbF3-z5oUJU",
+  authDomain: "seguridarcero.firebaseapp.com",
+  projectId: "seguridarcero"
+});
+
+var db = firebase.firestore();
+
+function enviardatos() {
+
+var telefono = document.querySelector('input[name="phone"]').value;
+console.log(telefono)
+var email = document.querySelector('input[name="email"]').value;
+var name = document.querySelector('input[name="name"]').value;
+var message = document.querySelector('input[name="programa"]').value;
+var codigopais = document.querySelector('select[name="inputpais"]').value;
+
+if(name != "" && email.indexOf("@") > -1 && email.indexOf(".") > -1 && message != "" && telefono.length != "")
+{
+  db.collection("webinarpython").add({
+      correo: email,
+      mensaje: "webinar python",
+      nombre: name,
+      telefono: telefono,
+      codigopais: codigopais
+  })
+
+  .then(function(docRef) {
+      console.log("Document written with ID: ", docRef.id);
+      document.getElementById("resultamessage").innerHTML="Le enviaremos pronto la invitación por correo y whatsapp."
+      document.getElementById("form-submit").disabled=disabled
+      formSuccess();
+  })
+  .catch(function(error) {
+      console.error("Error adding document: ", error);
+  });
+}
+else
+  document.getElementById("resultamessage").innerHTML="Completa tus datos adecuadamente."
+}
+</script>
+
+
+
+<section id="navbar">
+<div class="navbarContainer">
+<img src="./recursos/logoseguridad.png" alt="SEGURIDAD CERO" onclick="window.open('https://www.seguridadcero.com.pe/');">
+<!--
+<img src="./recursos/menu.png" alt="Menu" onclick="openSideBar()">
+-->
+</div>
+</section>
+
+<section id="sideBar">
+<div class="topSideBar">
+<img src="./recursos/logoseguridad.png" alt="SEGURIDAD CERO" onclick="window.open('https://www.seguridadcero.com.pe/')">
+<img src="./recursos/close.svg" alt="Cerrar menú" onclick="closeSideBar()">
+</div>
+<div class="sideBarContent">
+<div onclick="window.open(&#39;../desarrollofrontend&#39;, &#39;_self&#39;);">DESARROLLO FRONT-END</div>
+<div onclick="window.open(&#39;./&#39;, &#39;_self&#39;);">DESARROLLO BACK-END</div>
+<div onclick="window.open(&#39;../desarrollodeapps&#39;, &#39;_self&#39;);">DESARROLLO APLICATIVOS MÓVILES</div>
+<div onclick="window.open(&#39;../experienciadeusuario&#39;, &#39;_self&#39;);">DISEÑO DE EXPERIENCIA DE USUARIO</div>
+<br>
+<div onclick="closeSideBarSignUp()">
+INSCRÍBETE
+</div>
+</div>
+<div class="bottomSidebar">
+<img src="./recursos/logoseguridad.png" alt="SEGURIDAD CERO">
+</div>
+</section>
+<section id="welcome">
+<div class="programTitleInside">
+Seminario Básico
+</div>
+<div class="programNameInside">
+HACKING CON <br> PYTHON
+</div>
+<div class="programDescriptioInside" ><p style="color:#ffffff";>
+Expositor: Fernando Conislla
+</p></div>
+<div class="actionButtonInside">Fecha: Jueves 2 de Abril
+<br>
+Horario: 8:00pm (UTC -5:00)</div>
+</section>
+
+
+<form id="mainForm" autocomplete="off">
+<p>Gracias por tu inscripción! Pronto le enviaremos la invitación por Correo y Whatsapp</p>
+
+
+
+
+
+
+
+<!--
+<div class="boxContainer">
+<input type="checkbox" required="">
+<span>Acepto las<span id="myBtn"><b>Políticas de Privacidad</b></span></span>
+</div>
+-->
+
+<div class="group">
+
+<label id="resultamessage" style="color:red;"></label>
+<a style="color: red;font-size: 12px;" href="https://www.seguridadcero.com.pe/curso-ethical-hacking-online.html">Curso Online Ethical Hacking</a>
+
+</div>
+
+</form>
+
+
+<script src="./recursos/glide.min.js" type="text/javascript"></script>
+<script src="./recursos/axios.min.js.descarga" type="text/javascript"></script>
+<script src="./recursos/appProduct.min.js" type="text/javascript"></script>
+
+
+
+
+<!--<script src="./recursos/dealsBE.min.js" type="text/javascript"></script>-->
+
+
+
+<!--<script type="text/javascript" id="" src="./recursos/js"></script>-->
