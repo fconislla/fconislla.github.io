@@ -3,12 +3,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>ISO 27001 Auditor Certiprof</title>
-<meta name="description" content="ISO 27001 Auditor Certiprof">
-<meta property="og:title" content="Kit Completo ISO 27001 Auditor">
-<meta property="og:url" content="https://www.seguridadcero.com.pe/ISO27001-auditor-certiprof.html">
-<meta property="og:description" content="Preparación oficial + Examen + Simulador a 56% Dscto">
-<meta property="og:image" content="https://www.seguridadcero.com.pe/recursos/ISO27001A2.png">
+<title>Hacking Web Curso Online</title>
+<meta name="description" content="Hacking Web Curso Online">
+<meta property="og:title" content="Hacking Web Curso Online">
+<meta property="og:url" content="https://www.seguridadcero.com.pe/curso-hacking-web.html">
+<meta property="og:description" content="Hacking Web Curso Online">
+<meta property="og:image" content="https://www.seguridadcero.com.pe/recursos/oferta43.png">
 <meta property="og:type" content="website">
 <link rel="shortcut icon" href="./recursos/favicon.ico">
 
@@ -18,6 +18,7 @@
 
 <link href="./recursos/styles.css" rel="stylesheet">
 <link href="./recursos/stylesProductBE.css" rel="stylesheet">
+
 
 </head>
 <body id="mainBody">
@@ -46,7 +47,7 @@ var codigopais = document.querySelector('select[name="inputpais"]').value;
 
 if(name != "" && email.indexOf("@") > -1 && email.indexOf(".") > -1 && message != "" && telefono.length != "")
 {
-  db.collection("ISO27001A").add({
+  db.collection("webhacking").add({
       correo: email,
       mensaje: message,
       nombre: name,
@@ -56,6 +57,10 @@ if(name != "" && email.indexOf("@") > -1 && email.indexOf(".") > -1 && message !
 
   .then(function(docRef) {
       console.log("Document written with ID: ", docRef.id);
+      
+      /*document.getElementById("paypal").innerHTML = "<form id='paypal2' action='https://www.paypal.com/cgi-bin/webscr' method='post' target='_blank'><input type='hidden' name='cmd' value='_s-xclick'><input type='hidden' name='hosted_button_id' value='KV7QEHALL6JLS'><input type='image' src='https://www.paypalobjects.com/es_ES/ES/i/btn/btn_buynowCC_LG.gif' border='0' name='submit' alt='PayPal, la forma rápida y segura de pagar en Internet.'><img alt='' border='0' src='https://www.paypalobjects.com/es_XC/i/scr/pixel.gif' width='1' height='1'></form>"
+      document.getElementById("paypal2").submit();*/
+
       document.getElementById("resultamessage").innerHTML="Gracias! Nos comunicaremos contigo cuanto antes."
       formSuccess();
   })
@@ -72,8 +77,7 @@ else
 
 <section id="navbar">
 <div class="navbarContainer">
-<img src="./recursos/logoseguridad.png" alt="SEGURIDAD CERO" onclick="window.open('https://www.seguridadcero.com.pe/');">
-
+<img src="./recursos/logoseguridad2.png" alt="SEGURIDAD CERO" onclick="window.open('https://www.seguridadcero.com.pe/');">
 <!--
 <img src="./recursos/menu.png" alt="Menu" onclick="openSideBar()">
 -->
@@ -81,15 +85,22 @@ else
 </section>
 <section id="floatingButtons">
 <div class="floatinButtonsContainer desktop-hidden">
-<img src="./recursos/whatsapp.png" alt="Whatsapp" onclick="window.open(&#39;https://api.whatsapp.com/send?phone=51984375462&text=Deseo%20adquirir%20el%20Kit%20completo%20ISO%2027001%20Auditor&#39;, &#39;_blank&#39;);">
-<div class="buttonFormContainer" onclick="window.location=&quot;#mainForm&quot;">
+<img src="./recursos/whatsapp.png" alt="Whatsapp" onclick="window.open(&#39;https://api.whatsapp.com/send?phone=51984375462&text=Deseo%20inscibirme%20al%20curso%20de%20Ethical%20Hacking&#39;, &#39;_blank&#39;);">
+<div class="buttonFormContainer" onclick="window.location=&quot;#scheduele&quot;">
+  
 <img src="./recursos/form.png" alt="Contáctanos">
 </div>
 </div>
 
 <div class="floatinButtonsContainer2 mobile-hidden">
-<img src="./recursos/whatsapp.png" alt="Whatsapp" onclick="window.open(&#39;https://api.whatsapp.com/send?phone=51984375462&text=Deseo%20adquirir%20el%20Kit%20completo%20ISO%2027001%20Auditor&#39;, &#39;_blank&#39;);">
+<img src="./recursos/whatsapp.png" alt="Whatsapp" onclick="window.open(&#39;https://api.whatsapp.com/send?phone=51984375462&text=Deseo%20inscibirme%20al%20curso%20de%20Ethical%20Hacking&#39;, &#39;_blank&#39;);">
+<div class="buttonFormContainer" onclick="window.location=&quot;#mainForm&quot;">
+
+<img src="./recursos/form.png" alt="Contáctanos">
 </div>
+</div>
+
+
 
 
 
@@ -112,114 +123,220 @@ else
 <div onclick="closeSideBarSignUp()">
 INSCRÍBETE
 </div>
+
+
+
 </div>
 <div class="bottomSidebar">
-<img src="./recursos/logoseguridad.png" alt="SEGURIDAD CERO">
+<img src="./recursos/logoseguridad2.png" alt="SEGURIDAD CERO">
 </div>
 </section>
 
 <style>
-#welcome{background:url(recursos/portadaISO2701AD.png)
+#welcome{background:url(recursos/portadawebD.png)
 </style>
 <style>
-@media (max-width: 800px) {#welcome{background:url("recursos/portadaISO2701AM.png")}}>
+@media (max-width: 800px) {#welcome{background:url("recursos/portadawebM.png")}}>
 </style>
 
 <section id="welcome">
 <div class="programTitleInside">
-KIT COMPLETO OFICIAL
+CURSO ONLINE
 </div>
 <div class="programNameInside">
-ISO 27001<br> AUDITOR
-</div>
-
+HACKING <br>APLICACIONES WEB</div>
 <div class="programDescriptioInside"><p>
-
-
-Convierteté en el profesional certificado y<br>
-líder en seguridad de la información que las <br>
-empresas necesitan.
-
-<br> 
+Aprende como vulnerar y probar la <br>
+seguridad de las aplicaciones web<br>
+con las mejores tecnicas y herramientas.
 </p></div>
-<div class="actionButtonInside" onclick="document.getElementById(&#39;scheduele&#39;).scrollIntoView(true);">Más Info</div>
+<div class="actionButtonInside" onclick="document.getElementById(&#39;mainForm&#39;).scrollIntoView(true);">Inscríbete</div>
+
+
 
 </section>
-<section id="curricula">
-
-
+<!--
+<section id="scheduele">
+<div class="sectionTitle">
+Presentación
+</div>
 <div class="sectionText">
-Convierteté en el profesional certificado y líder en seguridad de la información que las empresas necesitan.<br><br>
 
-Prepárate a tu propio ritmo con el Kit completo y oficial de autoestudio en español de CertiProf y obtén la certificación internacional ISO 27001 Auditor.<br><br>
-<div class="desktop-hidden">
-<img width="100%" src="./recursos/ISO27001A.png">
-</div>
-<div class="mobile-hidden">
-<img width="50%" src="./recursos/ISO27001A.png">
-</div>
+En la coyuntura actual, las empresas dependen completamente de la tecnología y los ataques han aumentado estrepitosamente, lo que ha afianzado a los ciberatques como su riesgo número uno.
+<br><br>
+¡Las empresas no saben cómo defenderse ni saben a quien recurrir!
+<br><br>
+Asimismo, existe un enorme déficit en la cantidad de profesionales en ciberseguridad y ethical hackers para proteger a las organizaciones, por lo que muchos puestos de trabajo con altos salarios quedan sin cubrirse.
+<br><br>
 
-<p style="color:blue" id="demo" onclick="window.open('https://www.certiprof.com/exams/certiprof-shop-iso-27001-auditor-certificate/');"><u>*Características del examen</u></p>
-<style>
-#brochure {width: 48%;background-color:#000000;}
-</style>
-<button type="button" onclick="window.open('https://www.seguridadcero.com.pe/recursos/Brochure-I27001A.pdf');" id="brochure">Brochue</button>
-<button type="button" onclick="window.open('https://www.seguridadcero.com.pe/recursos/Temario-ISO27001A.pdf');" id="brochure">Temario</button>
-
+Por ello, hemos desarrollado este curso basándonos en las mejores prácticas de seguridad ofensiva de la industria, a la que hemos añadido nuestra experiencia en servicios y entrenamientos en ciberseguridad para clientes del sector gobierno, banca, medios de pago, etc.
+<br><br>
+¡Este es el mejor momento para aprender Ethical Hacking e ingresar a la industria de la ciberseguridad!
 
 </div>
-
-
 </section>
+-->
 
 <section id="scheduele">
+<div class="sectionTitle">
+Próximo Inicio
+</div>
+<div class="schedueleContainer">
+
+<div class="schedueleGray">
+<div class="schedueleTitle">Fechas</div>
+<div class="schedueleBody">23,25,30 de Junio </div>
+<div class="schedueleBody">2,7,9 de Julio</div>
+
+</div>
+
+<div class="schedueleGray">
+<div class="schedueleTitle">Horario</div>
+<div class="schedueleBody">8:00 pm - </div>
+<div class="schedueleBody">11:00 pm</div>
+
+</div>
+
+<div class="schedueleGray">
+<div class="schedueleTitle">Modalidad</div>
+<div class="schedueleBody">Online</div>
+<div class="schedueleBody">UTC-05:00</div>
+
+</div>
+</div>
+
+</section>
+
+
+<section id="curricula">
+<div class="sectionTitle">
+Contenido
+</div>
+
+<div class="sectionText">
+Nuestro programa de formación abarca de forma completa la metodología (OWASP), técnicas y herramientas de ataque más modernas y efectivas para vulnerar las aplicaciones web.
+
+</div>
+
+
+<div class="unitContainer">
+
+<div class="unitButton" onclick="openUnit1()">
+<div class="unitTitle">
+
+<br>Introducción al Hacking Web
+<br>
+<br>Guía de pruebas OWASP
+<br>
+<br>Recolección de información
+<br>
+<br>Análisis automático
+<br>
+<br>Proxies e interceptación
+<br>
+<br>Ejecución de código remoto
+<br>
+<br>Inyecciones SQL e Inyección OS
+<br>
+<br>RFI. LFI y carga de archivos
+<br>
+<br>Ataques XML y XXE
+<br>
+<br>XSS, inyección HTML
+<br>
+<br>Atacando la Autenticación
+<br>
+<br>Atacando la Autorización
+<br>
+<br>Atacando las sesiones y CSRF
+<br>
+<br>Atacando la criptografía
+<br>
+<br>Hacking de Servidores Web
+<br>
+<br>Hacking de CMS
+
+</div>
+</div>
+
+</div>
 
 <div class="sectionText">
 
-Como parte de un acuerdo exclusivo con Certiprof y por única vez ofrecemos este gran descuento para fomentar la capacitación de profesionales en seguridad de la información.
+</div>
+
+</section>
+
+
+<section id="employability3">
+<div class="sectionTitle">
+Instructor
+</div>
+
+<div class="rightcard">
+
+<div class="sectionText">
+<h1><b style="color:#000000">Fernando Conislla</b></h1>
+<h2>Experto en ciberseguridad</h2>
+
+
+Experto en ciberseguridad y ethical hacker con años de experiencia en consultoria para el sector banca, medios de pago, entidades gubernamentales, etc. Asimismo, Cuenta con multiples certificaciones internacionales en ciberseguridad como CEH, CPTE, CSWAE, LSCPC. Instructor en ciberseguridad en diferentes centros de formación de TI. Speaker internacional en DragonJar, Bsides Latam, etc
+
+</div>
+<style>
+#linkedin {width:100%;background-color:#0e76a8;}
+
+</style>
+<div class="valueCards mobile-hidden">
+<div >
+    <button type="button" onclick="window.open('https://www.linkedin.com/in/fernando-conislla-murguia/');" id="linkedin">Perfil Linkedin</button>
+ <img src="./recursos/instructor.png">
+</div>
+
+</div>
+</div>
+<div class="desktop-hidden glide__slide">
+<button type="button" onclick="window.open('https://www.linkedin.com/in/fernando-conislla-murguia/');" id="linkedin">Perfil Linkedin</button>
+<img src="./recursos/instructor.png">
+
+</div>
+</section>
+
+
+<section id="scheduele">
+<div class="sectionTitle">
+Inversión
+</div>
+<div class="sectionText">
+Al participar en nuestro curso obtendrás la mejor formación en ethical hacking, la misma que hemos impartido para entidades del sector gobierno, banca, telecomunicaciones y otros. 
+
 <br>
 <h3>Nuestra oferta de valor incluye:</h3>
 
-    
-Examen ISO 27001 Auditor: <strike>150 USD</strike><br>
-Material Oficial en español: <strike>100 USD</strike><br>
-Simulador Examen Oficial: <strike>35USD</strike>
-
-<h3>Además:</h3>
-Certificado de finalización SEGURIDAD CERO<br>
-Acceso a grupo Privado de Alumnos<br>
-Descuentos en cursos de SEGURIDAD CERO<br>
-
+✔️ Material completo del curso
 <br>
+✔️ Clases 100% en vivo
+<br>
+✔️ Acceso a sesiones grabadas
+<br>
+✔️ Certificado de Finalización
+<br>
+<h3>Acceso al grupo Privado de Alumnos</h3>
+Tu aprendizaje no acaba con nuestro curso, porque te uniras al grupo privado de alumnos donde nuestros instructores y otros alumnos te ayudarán a resolver tus dudas y consultas.<br>
+<h3>Regalos con tu participación:</h3>
+🎁 Regalo 1: Minicurso OWASP Top 10 API<br>
+🎁 Regalo 2: Minicurso OWASP Top 10 Mobile<br>
+🎁 Regalo 3: Minicurso OWASP Top 10 Web
+<br>
+<h3>Plantilla de informe</h3>
+Acceso de descarga a una plantilla completa de presentación de resultados profesional para un servicio de hacking de aplicaciones web.<br>
 
-<h1>Inversión:</h1>
+
+
+
 </div>
 <div class="sectionText">
-
-<h3>Miembros de la comunidad SEGURIDAD CERO</h3>
-
-<p style="color:blue" id="demo" onclick="window.open('https://t.me/seguridadcero');"><u>Únete a la comunidad en Telegram</u></p>
-
-</div>
-
-<div class="schedueleContainer">
-
-<div class="schedueleFucsia">
-<div class="schedueleTitle"><strike>Precio Normal:</strike></div>
-<div class="schedueleBody"><strike>285 USD</strike></div>
-</div>
-
-<div class="scheduelered">
-<div class="schedueleTitle">Oferta:</div>
-<div class="schedueleTitle2">125 USD</div>
-<div class="schedueleTitle">*Hasta 31 Mayo</div>
-</div>
-
-</div>
-
-<div class="sectionText">
-<h3>Alumnos SEGURIDAD CERO</h3>
-Si alguna vez llevaste un curso con nosotros puedes acceder a este descuento.
+<h3>Inscríbete y accede a todo este contenido por este precio exclusivo: </h3>
 </div>
 
 
@@ -227,24 +344,30 @@ Si alguna vez llevaste un curso con nosotros puedes acceder a este descuento.
 
 <div class="schedueleFucsia">
 <div class="schedueleTitle"><strike>Precio Normal:</strike></div>
-<div class="schedueleBody"><strike>285 USD</strike></div>
+<div class="schedueleBody"><strike>400 USD</strike></div>
 </div>
 
 <div class="scheduelered">
-<div class="schedueleTitle">Oferta:</div>
-<div class="schedueleTitle2">99 USD</div>
-<div class="schedueleTitle">*Hasta 31 Mayo</div>
+<div class="schedueleTitle">Oferta 50%:</div>
+<div class="schedueleTitle2">199 USD</div>
+<div class="schedueleTitle">*Hasta 22 Junio</div>
 </div>
+
+
+
 
 </div>
 
-<div class="sectionText">
 
-</div>
+
 </section>
 
+<br><br>
+
 <form id="mainForm" autocomplete="off">
-<p>Inscríbete ahora y accede a la <b><b style="color:#ff0000">oferta</b></b> en el curso.</p>
+
+<p>Inscríbete y accede a la <b><b style="color:#ff0000">oferta</b></b> en el precio del curso.</p>
+
 <div class="group">
 <input type="text" name="name" required="">
 <span class="highlight"></span>
@@ -474,17 +597,22 @@ Si alguna vez llevaste un curso con nosotros puedes acceder a este descuento.
 <input type="hidden" name="programa" value="Hacking Online">
 <!--<input type="submit" value="Inscríbete">-->
 
-<button type="button" onclick="enviardatos()" id="form-submit">Inscríbete</button>
+<button type="button" onclick="enviardatos();window.open('curso-ethical-hacking-online-pagar.html')" id="form-submit">Inscríbete</button>
+
 
 <div class="group">
 <label id="resultamessage" style="color:red;"></label>
-<a style="color: red;font-size: 12px;" target="_blank" href="https://api.whatsapp.com/send?phone=51984375462&text=Deseo adquirir el Kit completo ISO 27001 Auditor">¿Problemas para inscribirte?</a>
+<a style="color: red;font-size: 12px;" href="https://api.whatsapp.com/send?phone=51984375462&text=Deseo inscibirme al curso de Ethical Hacking">¿Problemas para inscribirte?</a>
 </div>
 
 </form>
 
+<section id="paypal">
+</section>
+
 <section id="footer">
-<img src="recursos/logoseguridad.png" alt="SEGURIDAD CERO">
+<img src="recursos/logoseguridad2.png" alt="SEGURIDAD CERO">
+
 </section>
 
 <div id="myModal" class="modal">
