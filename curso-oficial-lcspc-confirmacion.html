@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Ethical Hacking Curso Online</title>
+<meta name="description" content="Ethical Hacking Curso Online">
+<meta property="og:title" content="Ethical Hacking Curso Online">
+<meta property="og:url" content="https://www.seguridadcero.com.pe/curso-ethical-hacking-online.html">
+<meta property="og:description" content="Ethical Hacking Curso Online">
+<meta property="og:image" content="https://www.seguridadcero.com.pe/recursos/oferta43.png">
+<meta property="og:type" content="website">
+<link rel="shortcut icon" href="./recursos/favicon.ico">
+
+
+<link href="./recursos/glide.core.min.css" rel="stylesheet">
+<link href="./recursos/glide.theme.min.css" rel="stylesheet">
+
+<link href="./recursos/styles.css" rel="stylesheet">
+<link href="./recursos/stylesProductBE.css" rel="stylesheet">
+
+</head>
+<body id="mainBody">
+
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
+
+
+<script>
+firebase.initializeApp({
+  apiKey: "AIzaSyBqUsraUjtLgeinW907gyq3gbF3-z5oUJU",
+  authDomain: "seguridarcero.firebaseapp.com",
+  projectId: "seguridarcero"
+});
+
+var db = firebase.firestore();
+
+function enviardatos() {
+
+var telefono = document.querySelector('input[name="phone"]').value;
+console.log(telefono)
+var email = document.querySelector('input[name="email"]').value;
+var name = document.querySelector('input[name="name"]').value;
+var message = document.querySelector('input[name="programa"]').value;
+var codigopais = document.querySelector('select[name="inputpais"]').value;
+
+if(name != "" && email.indexOf("@") > -1 && email.indexOf(".") > -1 && message != "" && telefono.length != "")
+{
+  db.collection("contactos2").add({
+      correo: email,
+      mensaje: message,
+      nombre: name,
+      telefono: telefono,
+      codigopais: codigopais
+  })
+
+  .then(function(docRef) {
+      console.log("Document written with ID: ", docRef.id);
+      
+      /*document.getElementById("paypal").innerHTML = "<form id='paypal2' action='https://www.paypal.com/cgi-bin/webscr' method='post' target='_blank'><input type='hidden' name='cmd' value='_s-xclick'><input type='hidden' name='hosted_button_id' value='KV7QEHALL6JLS'><input type='image' src='https://www.paypalobjects.com/es_ES/ES/i/btn/btn_buynowCC_LG.gif' border='0' name='submit' alt='PayPal, la forma rápida y segura de pagar en Internet.'><img alt='' border='0' src='https://www.paypalobjects.com/es_XC/i/scr/pixel.gif' width='1' height='1'></form>"
+      document.getElementById("paypal2").submit();*/
+
+      document.getElementById("resultamessage").innerHTML="Gracias! Nos comunicaremos contigo cuanto antes."
+      formSuccess();
+  })
+  .catch(function(error) {
+      console.error("Error adding document: ", error);
+  });
+}
+else
+  document.getElementById("resultamessage").innerHTML="Completa tus datos adecuadamente."
+}
+</script>
+
+
+
+<section id="navbar">
+<div class="navbarContainer">
+<img src="./recursos/logoseguridad2.png" alt="SEGURIDAD CERO" onclick="window.open('https://www.seguridadcero.com.pe/');">
+<!--
+<img src="./recursos/menu.png" alt="Menu" onclick="openSideBar()">
+-->
+</div>
+</section>
+<section id="floatingButtons">
+<div class="floatinButtonsContainer desktop-hidden">
+<img src="./recursos/whatsapp.png" alt="Whatsapp" onclick="window.open(&#39;https://api.whatsapp.com/send?phone=51992234599&text=Deseo%20inscibirme%20al%20curso%20de%20Ethical%20Hacking&#39;, &#39;_blank&#39;);">
+<div class="buttonFormContainer" onclick="window.location=&quot;#mainForm&quot;">
+<img src="./recursos/form.png" alt="Contáctanos">
+</div>
+</div>
+
+<div class="floatinButtonsContainer2 mobile-hidden">
+<img src="./recursos/whatsapp.png" alt="Whatsapp" onclick="window.open(&#39;https://api.whatsapp.com/send?phone=51992234599&text=Deseo%20inscibirme%20al%20curso%20de%20Ethical%20Hacking&#39;, &#39;_blank&#39;);">
+</div>
+
+
+
+
+
+
+
+</section>
+<section id="sideBar">
+<div class="topSideBar">
+<img src="./recursos/logoseguridad.png" alt="SEGURIDAD CERO" onclick="window.open('https://www.seguridadcero.com.pe/')">
+<img src="./recursos/close.svg" alt="Cerrar menú" onclick="closeSideBar()">
+</div>
+<div class="sideBarContent">
+<div onclick="window.open(&#39;../desarrollofrontend&#39;, &#39;_self&#39;);">DESARROLLO FRONT-END</div>
+<div onclick="window.open(&#39;./&#39;, &#39;_self&#39;);">DESARROLLO BACK-END</div>
+<div onclick="window.open(&#39;../desarrollodeapps&#39;, &#39;_self&#39;);">DESARROLLO APLICATIVOS MÓVILES</div>
+<div onclick="window.open(&#39;../experienciadeusuario&#39;, &#39;_self&#39;);">DISEÑO DE EXPERIENCIA DE USUARIO</div>
+<br>
+<div onclick="closeSideBarSignUp()">
+INSCRÍBETE
+</div>
+
+
+
+</div>
+<div class="bottomSidebar">
+<img src="./recursos/logoseguridad2.png" alt="SEGURIDAD CERO">
+</div>
+</section>
+
+<style>
+#welcome{background:url(recursos/portadaLCSPC.jpg)
+</style>
+
+<section id="welcome">
+<div class="programTitleInside">
+CURSO OFICIAL
+</div>
+<div class="programNameInside">
+LCSPC CERTIPROF
+</div>
+
+<div class="actionButtonInside">Gracias por tu inscripción! Nos pondremos en contacto contigo en menos de 24 horas.</div>
+
+<div class="programDescriptioInside">
+<a style="color: white;font-size: 12px;" href="https://api.whatsapp.com/send?phone=51992234599&text=Tengo problemas con mi inscripción">¿Problemas con tu inscripción?</a>
+</div>
+
+</section>
+
+
+
+
+
+<div id="myModal" class="modal">
+
+</div>
+
+
+<script src="./recursos/glide.min.js" type="text/javascript"></script>
+<script src="./recursos/axios.min.js.descarga" type="text/javascript"></script>
+<script src="./recursos/appProduct.min.js" type="text/javascript"></script>
+
+
+
+<!--<script src="./recursos/dealsBE.min.js" type="text/javascript"></script>-->
+
+
+
+<!--<script type="text/javascript" id="" src="./recursos/js"></script>-->

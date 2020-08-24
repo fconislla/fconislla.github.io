@@ -46,7 +46,7 @@ var codigopais = document.querySelector('select[name="inputpais"]').value;
 
 if(name != "" && email.indexOf("@") > -1 && email.indexOf(".") > -1 && message != "" && telefono.length != "")
 {
-  db.collection("LCSPC").add({
+  db.collection("CursoLCSPC").add({
       correo: email,
       mensaje: message,
       nombre: name,
@@ -206,7 +206,7 @@ Libro Oficial
 </div>
 
 <div class="sectionText">
-Acceso descargable al libro de estudio oficial con todo el contenido necesario para obtener la certificación internacional.
+Acceso descargable al libro oficial de estudio con todo el contenido necesario para obtener la certificación internacional.
 <br>
 <br>
 <img width="50%" src="./recursos/materialestudio.png">
@@ -337,8 +337,8 @@ Sin embargo, nuestra oferta de valor incluye:<br>
 ✔️ Grupo de estudios <br>
 ✔️ 2 Webinars de Seguimiento<br>
 ✔️ Examen certificación<br>
-✔️ Certificado SEGURIDAD CERO<br>
 ✔️ Reintento del examen<br>
+✔️ Certificado SEGURIDAD CERO<br>
 ✔️ Plantillas de implementación<br>
 ✔️ Instructor experto <br><br>
 Una formación tan completa y con un seguimiento tan personalizado no esta disponible actualmente en el mercado. Esta es la única edición para este año.<br><br>
@@ -373,7 +373,9 @@ Sin embargo, tenemos un gran descuento para esta formación con certificación i
 
 
 <form id="mainForm" autocomplete="off">
-<p>Inscríbete y accede a un <b><b style="color:#ff0000">50%</b></b> de descuento en el curso.</p>
+
+<p>Inscríbete y accede a la <b><b style="color:#ff0000">oferta</b></b> en el precio del curso.</p>
+
 <div class="group">
 <input type="text" name="name" required="">
 <span class="highlight"></span>
@@ -584,7 +586,7 @@ Sin embargo, tenemos un gran descuento para esta formación con certificación i
 </select>
 <input type="number" name="phone" step="1" min="100000" max="99999999999999999" required="" id="inputtel" placeholder="999999999">
 <span class="highlight"></span>
-<label>Whatsapp (Ej: +51 992234599)</label>
+<label>Whatsapp (Ej: +51 984375462)</label>
 </div>
 
 <div class="group">
@@ -603,11 +605,12 @@ Sin embargo, tenemos un gran descuento para esta formación con certificación i
 <input type="hidden" name="programa" value="Hacking Online">
 <!--<input type="submit" value="Inscríbete">-->
 
-<button type="button" onclick="enviardatos()" id="form-submit">Inscríbete</button>
+<button type="button" onclick="enviardatos();window.open('curso-oficial-lcspc-pagar.html')" id="form-submit">Inscríbete</button>
+
 
 <div class="group">
 <label id="resultamessage" style="color:red;"></label>
-<a style="color: red;font-size: 12px;" href="https://api.whatsapp.com/send?phone=51992234599&text=Deseo inscibirme al curso de Ethical Hacking">¿Problemas para inscribirte?</a>
+<a style="color: red;font-size: 12px;" href="https://api.whatsapp.com/send?phone=51984375462&text=Deseo inscibirme al curso de Ethical Hacking">¿Problemas para inscribirte?</a>
 </div>
 
 </form>
