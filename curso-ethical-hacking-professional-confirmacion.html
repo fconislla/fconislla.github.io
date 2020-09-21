@@ -56,9 +56,7 @@ if(name != "" && email.indexOf("@") > -1 && email.indexOf(".") > -1 && message !
 
   .then(function(docRef) {
       console.log("Document written with ID: ", docRef.id);
-      
-      /*document.getElementById("paypal").innerHTML = "<form id='paypal2' action='https://www.paypal.com/cgi-bin/webscr' method='post' target='_blank'><input type='hidden' name='cmd' value='_s-xclick'><input type='hidden' name='hosted_button_id' value='KV7QEHALL6JLS'><input type='image' src='https://www.paypalobjects.com/es_ES/ES/i/btn/btn_buynowCC_LG.gif' border='0' name='submit' alt='PayPal, la forma rápida y segura de pagar en Internet.'><img alt='' border='0' src='https://www.paypalobjects.com/es_XC/i/scr/pixel.gif' width='1' height='1'></form>"
-      document.getElementById("paypal2").submit();*/
+
 
       document.getElementById("resultamessage").innerHTML="Gracias! Nos comunicaremos contigo cuanto antes."
       formSuccess();
