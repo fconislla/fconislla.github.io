@@ -4,9 +4,15 @@
 /*Scheduele*/
 #scheduele{margin-top:10vw}.schedueleContainer{display:flex;width:100%}.schedueleGray{background:#eaebeb;display:flex;flex-direction:column;width:30vw;padding:6vw 2vw}.schedueleContainer .schedueleGray:first-child{padding:6vw 2vw 6vw 4vw}.schedueleFucsia{background:#000000;display:flex;flex-direction:column;width:40vw;padding:6vw 4vw;color:#fff;font-size:4vw}.scheduelered{background:#ff0000;display:flex;flex-direction:column;width:40vw;padding:6vw 4vw;color:#fff;font-size:4vw}.schedueleTitle{font-size:3.5vw;font-weight:700}.schedueleTitle2{font-size:5.0vw;font-weight:700}.schedueleGray .schedueleBody{font-size:3.5vw;padding-top:2vw;font-weight:300}.schedueleGray .schedueleBody:last-child{font-size:3.5vw;padding-top:0;font-weight:300}@media only screen and (min-width:500px){#scheduele{width:60vw;margin-top:5vw}.schedueleContainer{padding:2vw 4vw}.schedueleGray{padding:3vw 2vw}.schedueleContainer .schedueleGray:first-child{padding:3vw 2vw 3vw 4vw}.schedueleFucsia{padding:3vw 4vw;font-size:2vw}.scheduelered{padding:3vw 4vw;font-size:2vw}.schedueleTitle{font-size:1.5vw}.schedueleTitle2{font-size:2.5vw}.schedueleGray .schedueleBody{font-size:1.5vw;padding-top:1vw}.schedueleGray .schedueleBody:last-child{font-size:1.5vw}}
 
-#centrar{padding: 2vw 0vw 0vw 0vw;display: flex;width: 96vw}@media only screen and (min-width: 500px){#centrar {padding: 0vw 0vw 0vw 4vw;display: flex;width: 100%;}}
 
-#pagar {width: 100%;background-color:#ff0000;font-size: 5vw;border: 3px solid #000000;margin-bottom:10px;}@media only screen and (min-width: 500px){#pagar {width: 100%;background-color:#ff0000;font-size: 2.5vw;border: 3px solid #000000;margin-bottom:0px;}}
+#timer{margin-top:10vw}.schedueleContainer{display:flex;width:100%}.schedueletimer{background:#000000;display:flex;flex-direction:column;width:100vw;padding:0vw 0vw;color:#fff;font-size:6vw}@media only screen and (min-width:500px){#timer{width:60vw;margin-top:5vw}.schedueleContainer{padding:2vw 4vw}.schedueletimer{padding:0vw 0vw;font-size:3vw}.schedueletimertext{padding:0vw 0vw;font-size:2vw}}
+
+#centrar{padding: 2vw 0vw 0vw 0vw;display: flex;width: 100vw;justify-content: center;}@media only screen and (min-width: 500px){#centrar {padding: 0vw 0vw 0.5vw 4vw;display: flex;width: 100%;justify-content: center;}}
+
+
+#inscribete {width: 30%;background-color:#ff0000;font-size: 5vw;border: 3px solid #000000;margin-bottom:10px;}@media only screen and (min-width: 500px){#inscribete {width: 30%;background-color:#ff0000;font-size: 2.0vw;border: 3px solid #000000;margin-bottom:0px;}}
+
+#pagar {width: 100%;background-color:#ff0000;font-size: 5vw;border: 3px solid #000000;margin-bottom:0px;}@media only screen and (min-width: 500px){#pagar {width: 100%;background-color:#ff0000;font-size: 2.5vw;border: 3px solid #000000;margin-bottom:0px;}}
 #whatsapp {width: 100%;background-color:#00bb2d;font-size: 5vw;border: 3px solid #000000;margin-bottom:10px;}@media only screen and (min-width: 500px){#whatsapp {width: 100%;background-color:#00bb2d;font-size: 2.5vw;border: 3px solid #000000;margin-bottom:0px;}}
 /*Malla Curricular*/
 
