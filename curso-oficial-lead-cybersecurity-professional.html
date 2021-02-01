@@ -19,6 +19,56 @@
 <link href="./recursos/styles.css" rel="stylesheet">
 <link href="./recursos/stylesProductBE.css" rel="stylesheet">
 
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script>
+var current = 0;
+var imagenes = new Array();
+ 
+$(document).ready(function() {
+    var numImages = 10;
+    if (numImages <= 3) {
+        $('.right-arrow').css('display', 'none');
+        $('.left-arrow').css('display', 'none');
+    }
+ 
+    $('.left-arrow').on('click',function() {
+        if (current > 0) {
+            current = current - 1;
+        } else {
+            current = numImages - 3;
+        }
+ 
+        $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+ 
+        return false;
+    });
+ 
+    $('.left-arrow').on('hover', function() {
+        $(this).css('opacity','0.5');
+    }, function() {
+        $(this).css('opacity','1');
+    });
+ 
+    $('.right-arrow').on('hover', function() {
+        $(this).css('opacity','0.5');
+    }, function() {
+        $(this).css('opacity','1');
+    });
+ 
+    $('.right-arrow').on('click', function() {
+        if (numImages > current + 3) {
+            current = current+1;
+        } else {
+            current = 0;
+        }
+ 
+        $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+ 
+        return false;
+    }); 
+ });
+</script>
+
 </head>
 <body id="mainBody">
 
@@ -337,6 +387,40 @@ Añadimos 1 reintento por si fallas en tu primer examen.
 </div>
 </section>
 
+<section id="employability3">
+<div class="sectionTitle">
+Instructor
+</div>
+
+<div class="rightcard">
+
+<div class="sectionText">
+<h1><b style="color:#000000">Fernando Conislla</b></h1>
+<h2>Cybersecurity Instructor</h2>
+
+Años de experiencia en servicios de ciberseguridad para entidades gubernamentales, bancarias, medios de pago, etc.
+Instructor SEGURIDAD CERO e instructor oficial LCSPC.
+Speaker internacional en DragonJar, Bsides Latam, Ekoparty, 8dot8, etc
+Master en gestión y dirección de la ciberseguridad.
+Certificaciones internacionales CEH, ISO 27001 LA, LCSPC.
+
+</div>
+<style>
+#linkedin {width:100%;background-color:#0e76a8;}
+
+</style>
+<div class="valueCards mobile-hidden">
+<div >
+    
+ <img src="./recursos/instructorEH2.png">
+</div>
+
+</div>
+</div>
+
+
+</section>
+
 <section id="curricula">
 <div class="sectionTitle">
 Bonus 1: Taller Implementación NIST CSF
@@ -417,6 +501,69 @@ Al terminar el curso oficial de certifiación, emitiremos un certificado de fina
 
 </div>
 </section>
+
+
+<section id="curricula">
+<div class="sectionTitle">
+Nuestros Alumnos
+</div>
+
+<div class="sectionText">
+Nuestros cientos de alumnos han logrado certificarse como expertos en ciberseguridad y adquirir experiencia practica en la implementación del marco NIST CSF.
+<br>
+
+<div id="carrusel">
+    <a href="#" class="left-arrow"><img src="recursos/certificados/left-arrow3.png" /></a>
+    <a href="#" class="right-arrow"><img src="recursos/certificados/right-arrow3.png" /></a>
+    <div class="carrusel">
+        <div class="product" id="product_0">
+            <img src="recursos/certificados/Imagen1.png" width="100%" height="100%" />
+           
+        </div>
+        <div class="product" id="product_1">
+            <img src="recursos/certificados/Imagen2.png" width="100%" height="100%" />
+            
+        </div>
+        <div class="product" id="product_2">
+            <img src="recursos/certificados/Imagen3.png" width="100%" height="100%" />
+           
+        </div>
+        <div class="product" id="product_3">
+            <img src="recursos/certificados/Imagen4.png" width="100%" height="100%" />
+           
+        </div>
+        <div class="product" id="product_4">
+            <img src="recursos/certificados/Imagen5.png" width="100%" height="100%" />
+           
+        </div>
+        <div class="product" id="product_5">
+            <img src="recursos/certificados/Imagen6.png" width="100%" height="100%" />
+           
+        </div>
+         <div class="product" id="product_6">
+            <img src="recursos/certificados/Imagen7.png" width="100%" height="100%" />
+           
+        </div>
+
+        <div class="product" id="product_7">
+            <img src="recursos/certificados/Imagen8.png" width="100%" height="100%" />
+           
+        </div>
+        <div class="product" id="product_8">
+            <img src="recursos/certificados/Imagen9.png" width="100%" height="100%" />
+           
+        </div>
+        <div class="product" id="product_9">
+            <img src="recursos/certificados/Imagen10.png" width="100%" height="100%" />
+           
+        </div>
+
+    </div>
+</div>
+
+</div>
+</section>
+
 
 <section id="scheduele">
 <div class="sectionTitle">
