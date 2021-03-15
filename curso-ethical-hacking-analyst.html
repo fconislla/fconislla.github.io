@@ -47,7 +47,7 @@ var codigopais = document.querySelector('select[name="inputpais"]').value;
 
 if(name != "" && email.indexOf("@") > -1 && email.indexOf(".") > -1 && message != "" && telefono.length != "")
 {
-  db.collection("EHPro").add({
+  db.collection("EHAnalyst").add({
       correo: email,
       mensaje: message,
       nombre: name,
