@@ -25,7 +25,7 @@ form{padding:1.5vw 4vw 4vw 4vw;background:#f7f7f7;z-index:100;font-size:1.5rem;p
 
 #inputtel{width:calc(100% - 60vw);display: inline;}@media only screen and (min-width:500px){#inputtel{width:calc(100% - 14vw);display: inline;}}
 /*footer*/
-#footer{height:30vw;background:#000000;display:flex;align-items:center;position:relative;z-index:100;padding-left:4vw}#footer img{height:12vw}@media only screen and (min-width:500px){#footer{margin-top:4vw;height:5vw}#footer img{height:3vw}}
+#footer{height:30vw;background:#000000;display:flex;align-items:center;position:relative;z-index:100;padding-left:4vw}#footer img{height:12vw}@media only screen and (min-width:500px){#footer{margin-top:0vw;height:5vw}#footer img{height:3vw}}
 
 /* The Modal*/
 #myBtn{cursor:pointer}.modal{display:none;position:fixed;z-index:10000;padding-top:100px;left:0;top:0;width:100%;height:85%;overflow:auto;background-color:#000;background-color:rgba(0,0,0,.8)}.modal-content{background-color:#fefefe;margin:auto;padding:20px;border:1px solid #888;width:80%;margin-bottom:10vw}.byebye{color:#aaa;float:right;font-size:28px;font-weight:700}.byebye:focus,.byebye:hover{color:#000;text-decoration:none;cursor:pointer}@media only screen and (min-width:500px){.modal{height:100%}}
