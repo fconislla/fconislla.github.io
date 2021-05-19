@@ -46,7 +46,7 @@ var codigopais = document.querySelector('select[name="inputpais"]').value;
 
 if(name != "" && email.indexOf("@") > -1 && email.indexOf(".") > -1 && message != "" && telefono.length != "")
 {
-  db.collection("CursoISO27001LA").add({
+  db.collection("CursoISO27001LACertijoin").add({
       correo: email,
       mensaje: message,
       nombre: name,
